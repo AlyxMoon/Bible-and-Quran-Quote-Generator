@@ -1,5 +1,8 @@
 import json
+import os
 from mappings import *
+
+os.makedirs('data', exist_ok = True)
 
 outputData = {}
 
