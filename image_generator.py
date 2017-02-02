@@ -1,7 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
 from mappings import *
-from example import getRandomVerse
+from get_verses import getRandomVerse
 
 #-----------------------------
 # Configuration Options
