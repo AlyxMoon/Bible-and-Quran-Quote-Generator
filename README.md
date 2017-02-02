@@ -10,3 +10,7 @@ I was inspired by watching the video "The Holy Quran Experiment" on YouTube - [L
 The data for the Bible was downloaded from [here](https://github.com/honza/bibles). It is the English Standard Version.
 
 The data for the Quran was downloaded from [here](http://destroyblackmagic.com/quran-data-in-different-languages-json/). It is the English translation by A.J. Arberry.
+
+The font used is Antonio, downloaded from [FontSquirrel](https://www.fontsquirrel.com/).
+
+The background image was made by E. van Zummeren, downloaded from [Toptal](https://www.toptal.com/designers/subtlepatterns/black-felt).
