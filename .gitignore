@@ -1,6 +1,5 @@
 # Project Files
 data/
-tokens.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
