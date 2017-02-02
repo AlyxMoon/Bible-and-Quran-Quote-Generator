@@ -1,7 +1,11 @@
 import tweepy
 import os
 from image_generator import generateImage
-from tokens import *
+
+API_KEY             = os.environ['API_KEY']
+API_SECRET          = os.environ['API_SECRET']
+ACCESS_TOKEN        = os.environ['ACCESS_TOKEN']
+ACCESS_TOKEN_SECRET = os.environ['ACCESS_TOKEN_SECRET']
 
 auth = tweepy.OAuthHandler(API_KEY, API_SECRET)
 auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
