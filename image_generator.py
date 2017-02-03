@@ -10,10 +10,10 @@ text_font_path          = 'resources/Antonio.ttf'
 output_path             = 'data/output.png'
 
 image_width             = 2048
-image_height            = 1024
+image_height            = 1536
 
-max_chars_per_line      = 80
-text_size               = 32
+max_chars_per_line      = 70
+text_size               = 40
 text_color              = (255,255,255)
 text_padding            = 5
 footer_padding          = 20
@@ -40,7 +40,7 @@ def generateImage():
     quranFooter = 'Quran -- {0} | Verse {1}'.format(getSurahFromNum(quran['surah']), quran['ayah'])
 
     # Draw the left side (Quran)
-    current_h = ((image_width / 2) - getParagraphHeight(quran['verse'], text_padding, d, font)) / 2
+    current_h = (image_height - getParagraphHeight(quran['verse'], text_padding, d, font)) / 2
     for line in quran['verse']:
         w, h = d.textsize(line, font = font)
         d.text((image_width / 4 - w / 2, current_h), line, font = font, fill = text_color)
@@ -50,7 +50,7 @@ def generateImage():
     d.text((footer_padding, current_h + text_padding * 5), quranFooter, font = font, fill = text_color)
 
     # Draw the right side (Bible)
-    current_h = ((image_width / 2) - getParagraphHeight(bible['text'], text_padding, d, font)) / 2
+    current_h = (image_height - getParagraphHeight(bible['text'], text_padding, d, font)) / 2
     for line in bible['text']:
         w, h = d.textsize(line, font = font)
         d.text((image_width * 3 / 4 - w / 2, current_h), line, font = font, fill = text_color)
