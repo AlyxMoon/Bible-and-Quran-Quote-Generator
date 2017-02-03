@@ -1,6 +1,7 @@
 import tweepy
 import os
 from random import randint
+from get_verses import getRandomVerse
 from image_generator import generateImage
 
 if randint(1, int(os.environ['RUN_CHANCE'])) == 1:
@@ -13,8 +14,9 @@ if randint(1, int(os.environ['RUN_CHANCE'])) == 1:
     auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
     api = tweepy.API(auth)
 
-    imagePath, (quranFooter, bibleFooter) = generateImage()
-    statusText = '{0}\n{1}'.format(quranFooter, bibleFooter)
+    (bible, quran) = getRandomVerse()
+    imagePath = generateImage(bible, quran)
+    statusText = '{0}\n{1}'.format(quran['citation'], bible['citation'])
 
     api.update_with_media(imagePath, statusText)
     os.remove(imagePath)

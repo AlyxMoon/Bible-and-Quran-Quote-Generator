@@ -1,0 +1,5 @@
+API_KEY             = 'Text here'
+API_SECRET          = 'Text here'
+ACCESS_TOKEN        = 'Text here'
+ACCESS_TOKEN_SECRET = 'Text here'
+RUN_CHANCE          = 1
